@@ -44,6 +44,8 @@ int main (){
 		return 1;
 	}
 
+	close(fd);
+
 	read(connfd, buffer, BUFFER_SIZE);
 	printf("mensagem recebida: %s\n", buffer);
 
@@ -53,7 +55,6 @@ int main (){
 	printf("Resposta enviada: %s\n", message);
 
 	close(connfd);
-	close(fd);
 	return 0;
 
 }

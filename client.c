@@ -14,7 +14,7 @@ int main (int argc, char **argv){
 	char *message = "Olá servidor!";
 	struct sockaddr_in address;
 
-	if((fd = socket(AF_INET, SOCK_DGRAM, 0)) < 0) {
+	if((fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
 		printf("O socket não foi criado\n");
 		return 1;
   	}
